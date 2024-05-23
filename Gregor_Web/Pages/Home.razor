@@ -1,0 +1,16 @@
+﻿@page "/"
+@using SkiaSharp.Views.Blazor
+
+<PageTitle>Gregor Web</PageTitle>
+
+<div style="width: 100%; height: 500px; border: 1px solid red;">
+	<SKGLView @ref="skView" OnPaintSurface="OnPaint" IgnorePixelScaling="true">
+
+	</SKGLView>
+</div>
+@code{
+	SKGLView skView;
+	void OnPaint(SKPaintGLSurfaceEventArgs e){
+		var canvas = e.Surface.Canvas;
+	}
+}
